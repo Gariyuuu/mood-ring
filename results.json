@@ -1,0 +1,73 @@
+{
+  "run_date": "2026-09-05",
+  "transformers_version": "5.16.1",
+  "models": {
+    "sentiment": "distilbert-base-uncased-finetuned-sst-2-english",
+    "zero_shot": "facebook/bart-large-mnli",
+    "fill_mask": "distilbert-base-uncased"
+  },
+  "sentiment": [
+    {
+      "text": "This is hands down the best sandwich I have ever eaten.",
+      "label": "POSITIVE",
+      "score": 0.9974835515022278
+    },
+    {
+      "text": "Sure, the meeting could have been an email.",
+      "label": "NEGATIVE",
+      "score": 0.9975258708000183
+    },
+    {
+      "text": "I waited two hours and nobody even told me the flight was cancelled.",
+      "label": "NEGATIVE",
+      "score": 0.999257504940033
+    },
+    {
+      "text": "Cautiously optimistic about the new release.",
+      "label": "POSITIVE",
+      "score": 0.992985188961029
+    }
+  ],
+  "zero_shot": [
+    {
+      "text": "Sear the steak in a hot pan, then finish it in the oven with butter and thyme.",
+      "top_label": "cooking",
+      "score": 0.9856481552124023
+    },
+    {
+      "text": "He tore his ACL in the third quarter and is out for the season.",
+      "top_label": "sports",
+      "score": 0.9126083254814148
+    },
+    {
+      "text": "Interest rates on the thirty-year mortgage climbed again this quarter.",
+      "top_label": "finance",
+      "score": 0.9743550419807434
+    }
+  ],
+  "fill_mask": {
+    "prompt": "The best way to learn machine learning is to [MASK] things.",
+    "candidates": [
+      {
+        "token": "learn",
+        "score": 0.26475170254707336
+      },
+      {
+        "token": "understand",
+        "score": 0.1689561903476715
+      },
+      {
+        "token": "analyze",
+        "score": 0.04230157285928726
+      },
+      {
+        "token": "organize",
+        "score": 0.02554311417043209
+      },
+      {
+        "token": "explain",
+        "score": 0.025392431765794754
+      }
+    ]
+  }
+}
